@@ -19,21 +19,30 @@ const socialUrl = Astro.site.href + 'assets/social.png'
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
 <!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
+<title>{Astro.escapeHTML(title)}</title>
+<meta name="title" content={Astro.escapeHTML(title)} />
+<meta name="description" content={Astro.escapeHTML(description)} />
+
+
+
+
+
+
+
+
+
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={permalink} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
+<meta property="og:title" content={Astro.escapeHTML(title)} />
+<meta property="og:description" content={Astro.escapeHTML(description)} />
 <meta property="og:image" content={socialUrl} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={permalink} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
+<meta property="twitter:title" content={Astro.escapeHTML(title)} />
+<meta property="twitter:description" content={Astro.escapeHTML(description)} />
 <meta property="twitter:image" content={socialUrl} />
 
